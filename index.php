@@ -36,10 +36,10 @@ function createLittleImage($cutFile, $outFile, $columns, $hPercent, $xPercent, $
     $size = $image->getImageGeometry();
     $onePercentW = ceil($size['width'] / 100);
     $onePercentH = ceil($size['height'] / 100);
-    $w = ceil($size['width'] / $columns)."<br>";
-    $h = ceil($onePercentH * $hPercent)."<br>";
-    $x = ceil($onePercentW * $xPercent)."<br>";
-    $y = ceil($onePercentH * $yPercent)."<br>";
+    $w = ceil($size['width'] / $columns);
+    $h = ceil($onePercentH * $hPercent);
+    $x = ceil($onePercentW * $xPercent);
+    $y = ceil($onePercentH * $yPercent);
     $image->cropImage($w, $h, $x, $y);
     //save img
     $image->writeImage($outFile);
